@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading ...</title>
+
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #vlogo {
+            width: 640px;
+            height: 480px;
+        }
+
+        html,
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <video id="vlogo" width="320" height="240" autoplay muted>
+        <source src="/static/logos/vlogo.mp4" type="video/mp4">
+    </video>
+
+    <script>
+        document.getElementById('vlogo').addEventListener('ended', function() {
+            window.location.href = '/html/home.html'; 
+        });
+    </script>
+
+</body>
+
+</html>
